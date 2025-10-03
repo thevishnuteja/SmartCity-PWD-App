@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#2E6BF6</color>
+    <color name="colorSecondary">#333333</color>
+    <color name="text_light">#FFFFFF</color>
+    <color name="text_hint">#AAAAAA</color>
+    <!-- Your existing colors like black and white -->
+
+    <!-- New Icon Tint Colors -->
+    <color name="icon_tint_primary">#8E8E93</color>
+    <color name="icon_tint_warning">#FF9500</color>
+    <color name="icon_tint_accent">#007AFF</color>
+
+    <color name="placeholder_bg">#DDDDDD</color>
+
+    <!-- New UI Colors -->
+    <color name="card_background_light">#F2F2F7</color>
+
+    <color name="primary_blue">#2196F3</color>
+    <color name="dark_background">#2D2D2D</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="text_gray">#666666</color>
+    <color name="light_text_gray">#9E9E9E</color>
+
+    <!-- Override colors for dark theme -->
+    <color name="input_background_light">#424242</color>
+    <color name="input_text_light">#FFFFFF</color>
+    <color name="input_hint_light">#B0B0B0</color>
+    <color name="close_button_bg">#4A4A4C</color>
+    <color name="hint_text_color">#070707</color>
+    <color name="dark_bg">#1C1C1E</color>
+
+
+    <color name="card_yellow">#FDF1D6</color>
+    <color name="card_blue">#E3F6F8</color>
+    <color name="primary">#3F51B5</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_black">#000000</color>
+    <color name="text_grey">#888888</color>
+
+
+
+
+</resources>
+

@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.SmartCity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here if needed -->
+    </style>
+
+    <style name="Theme.SmartCity" parent="Base.Theme.SmartCity" />
+</resources>

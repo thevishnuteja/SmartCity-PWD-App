@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bg_complaint_card"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/TitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="CivicBuddy"
+                android:textColor="#FFFFFF"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="#4A4A4C"
+                android:contentDescription="Close"
+                android:src="@drawable/ic_close" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#3A3A3C"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:padding="8dp"
+                    android:layout_above="@+id/action_buttons_layout" /> <LinearLayout
+                android:id="@+id/action_buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="4dp"
+                android:visibility="gone"
+                android:layout_above="@id/input_area">
+
+                <Button
+                    android:id="@+id/btn_action_positive"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:textColor="#FFFFFF"
+                    app:strokeColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btn_action_negative"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:text="No"
+                    android:textColor="#FFFFFF"
+                    app:strokeColor="#FFFFFF" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/input_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_upload_image"
+                        android:layout_marginStart="3dp"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/camera"
+                        android:contentDescription="Upload Image"
+                        app:tint="#FFFFFF" />
+
+                    <EditText
+                        android:id="@+id/et_chat_input"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/chat_input_background"
+                        android:hint="Type or upload an image..."
+                        android:maxLines="5"
+                        android:minHeight="48dp"
+                        android:padding="12dp"
+                        android:textColor="#000000"
+                        android:textColorHint="#99000000" />
+
+                    <ImageButton
+                        android:id="@+id/btn_send_message"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/sendicon"
+                        android:contentDescription="Send Message" app:tint="#FFFFFF" />
+                </LinearLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/loading_indicator"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:elevation="10dp"
+                    android:visibility="gone"
+                    app:lottie_rawRes="@raw/chatbotanime"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

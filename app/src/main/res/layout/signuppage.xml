@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/signuppagebg" />
+
+    <!-- Signup Form Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp"
+            tools:ignore="ExtraText">
+
+            <!-- Username -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="63dp"
+                android:layout_marginTop="40dp"
+                android:text="Smart City - PWD Neighborhood"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="360dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="30dp"
+                android:baselineAligned="false"
+                android:text="Username"
+                android:textColor="#CCCCCC"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/outlined_edittext"
+                android:hint="Your Name"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#48FFFFFF"
+                android:textSize="13sp" />
+
+            <!-- Email -->
+            <TextView
+                android:layout_width="361dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:text="E-mail address"
+                android:textColor="#CCCCCC"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/outlined_edittext"
+                android:hint="Your E-mail Address"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#48FFFFFF"
+                android:textSize="13sp" />
+
+            <!-- Password -->
+
+            <TextView
+                android:layout_width="361dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="20dp"
+                android:text="Password"
+                android:textColor="#CCCCCC"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/outlined_edittext"
+                android:hint="***********"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#48FFFFFF" />
+
+            <!-- Re-enter Password -->
+            <TextView
+                android:layout_width="363dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:text="Re-Enter Your Password"
+                android:textColor="#CCCCCC"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/et_reenter"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/outlined_edittext"
+                android:hint="***********"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#48FFFFFF" />
+
+            <!-- Password Strength Bar -->
+            <ProgressBar
+                android:id="@+id/password_strength_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="15dp"
+                android:progress="50"
+                android:progressDrawable="@drawable/progressbar_custom" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Use 8 or more characters with a mix of letters, numbers and symbols."
+                android:textColor="#CCCCCC"
+                android:textSize="11sp" />
+
+            <!-- Get Started Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_get_started"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#3D5AFE"
+                android:text="Create Account"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="19dp" />
+
+            <!-- Already have account -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Do you already have an account?"
+                android:textColor="#CCCCCC" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sign_in"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#2C2C2C"
+                android:text="Sign In"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="19dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_google_sign_in"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:cornerRadius="19dp"
+                    android:text="Google"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white"
+                    app:icon="@drawable/goggleicon"
+                    app:iconGravity="textStart"
+                    app:iconPadding="12dp"
+                    app:iconSize="24dp"
+                    app:iconTint="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:strokeWidth="1dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
