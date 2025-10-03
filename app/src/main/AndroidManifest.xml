@@ -46,7 +46,7 @@
 
         <!-- Launcher Activity -->
         <activity
-            android:name=".actwelcomepage"
+            android:name=".actsubscribe_screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,6 +55,7 @@
         </activity>
 
         <!-- Other Activities -->
+        <activity android:name=".actwelcomepage" android:exported="true" />
         <activity android:name=".actlogin" android:exported="true" />
         <activity android:name=".actmainpage" android:exported="false" />
         <activity android:name=".actsignup" android:exported="false" />
