@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bg_complaint_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track Users"
+                android:textColor="#FFFFFF"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="#4A4A4C"
+                android:src="@drawable/ic_close"
+                android:contentDescription="Close" />
+        </RelativeLayout>
+
+        <!-- Active Users Button & Count -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_active_users"
+                style="@style/SubmitButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp"
+                android:text="Active Users"
+                app:backgroundTint="#4CAF50" />
+
+            <TextView
+                android:id="@+id/tv_user_count"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_rounded_white"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="#007AFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- User List Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="All Registered Users"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- User List RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_users"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="List of registered users"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+</RelativeLayout>

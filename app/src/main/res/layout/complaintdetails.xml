@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    tools:context=".actcomplaintdetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_complaint_card"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <ImageButton
+                    android:id="@+id/share_btn"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/share_btn"
+                    android:contentDescription="Share Complaint"
+                    app:tint="@android:color/white" />
+
+                <ImageButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="#4A4A4C"
+                    android:contentDescription="Close"
+                    android:src="@drawable/ic_close" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_view_container_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:shimmer_auto_start="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_rounded_white"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <View
+                            android:layout_width="200dp"
+                            android:layout_height="20dp"
+                            android:background="@color/placeholder_bg" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@color/placeholder_bg" />
+
+                        <View android:layout_width="match_parent" android:layout_height="16dp" android:background="@color/placeholder_bg" android:layout_marginBottom="12dp"/>
+                        <View android:layout_width="match_parent" android:layout_height="16dp" android:background="@color/placeholder_bg" android:layout_marginBottom="12dp"/>
+                        <View android:layout_width="match_parent" android:layout_height="16dp" android:background="@color/placeholder_bg" android:layout_marginBottom="12dp"/>
+                        <View android:layout_width="match_parent" android:layout_height="16dp" android:background="@color/placeholder_bg" android:layout_marginBottom="12dp"/>
+                        <View android:layout_width="match_parent" android:layout_height="16dp" android:background="@color/placeholder_bg" android:layout_marginBottom="12dp"/>
+                        <View android:layout_width="match_parent" android:layout_height="16dp" android:background="@color/placeholder_bg" android:layout_marginBottom="16dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="16dp">
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="4dp"
+                                android:background="@color/placeholder_bg"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_weight="1"
+                                android:layout_marginStart="4dp"
+                                android:background="@color/placeholder_bg"/>
+                        </LinearLayout>
+
+                        <View android:layout_width="180dp" android:layout_height="18dp" android:background="@color/placeholder_bg" android:layout_marginTop="24dp" android:layout_marginBottom="8dp"/>
+                        <View android:layout_width="match_parent" android:layout_height="14dp" android:background="@color/placeholder_bg" android:layout_marginBottom="4dp"/>
+                        <View android:layout_width="250dp" android:layout_height="14dp" android:background="@color/placeholder_bg"/>
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/complaint_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rounded_white"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Complaint Details"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="#DDDDDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Complaint ID:"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/complaint_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="CMP-2024-12345" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Issue Type:"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/complaint_issuetype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="Water Supply Issue" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Location:"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/complaint_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="123 Example St, Hyderabad" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Date &amp; Time:"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/complaint_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            tools:text="01/09/2025 08:30 am" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Issue Details:"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/complaint_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Water supply has been inconsistent for the past three days." />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Status:"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/complaint_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?attr/colorPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:text="Pending" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/images_section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="User Uploaded"
+                                android:textColor="#757575"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Completed Image"
+                                android:textColor="#757575"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- First Image Card with Border -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#000000"
+                                app:strokeWidth="1dp">
+                                <ImageView
+                                    android:id="@+id/image1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/users_icon" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <!-- Second Image Card with Border -->
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="150dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="0dp"
+                                app:strokeColor="#000000"
+                                app:strokeWidth="1dp">
+                                <ImageView
+                                    android:id="@+id/image2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img_4" />
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/next_steps_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/next_steps_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="What happens next?"
+                            android:textColor="?android:attr/textColorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/next_steps_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="4dp"
+                            android:text="• Your complaint will be reviewed within 24-48 hours\n• Track progress in 'Track Status' section"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/print_complaint"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#007AFF"
+                    android:text="Print"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/delete_complaint"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#FF3B30"
+                    android:text="Delete"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

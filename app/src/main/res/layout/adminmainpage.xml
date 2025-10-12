@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/admin_home_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/adminmainpagebg" />
+
+    <!-- Dim overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D12D2D2D" /> <!-- 50% opacity black overlay -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp">
+
+            <TextView
+                android:id="@+id/admin_greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello\nAdmin"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:lineSpacingExtra="4dp" />
+
+            <ImageView
+                android:id="@+id/notification_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/notifyplane" />
+        </RelativeLayout>
+
+        <!-- Dashboard Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="28dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#FDF1D6"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/dashboard_icon"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/dashboard"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/dashboard_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dashboard_icon"
+                    android:layout_marginTop="5dp"
+                    android:text="Complaint Dashboard"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/dashboard_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dashboard_title"
+                    android:layout_marginTop="5dp"
+                    android:text="📅 20 July"
+                    android:textSize="14sp"
+                    android:textColor="#666666" />
+
+                <TextView
+                    android:id="@+id/dashboard_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/dashboard_date"
+                    android:text="Admin dashboard summary here."
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/openarrow"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Complaint Tracking Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_complaint"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#E3F6F8"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/complaint_icon"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/trackusers"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/track_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/complaint_icon"
+                    android:layout_marginTop="5dp"
+                    android:text="Track Users"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/track_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/track_title"
+                    android:layout_marginTop="5dp"
+                    android:text="📅 12 June"
+                    android:textSize="14sp"
+                    android:textColor="#666666" />
+
+                <TextView
+                    android:id="@+id/complaint_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/track_date"
+                    android:layout_marginTop="5dp"
+                    android:text="Monitor all user complaints."
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/openarrow"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/nav_profile"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#FFC0E0"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/adminprofile_icon"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/adminprof"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/profileadmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adminprofile_icon"
+                    android:layout_marginTop="5dp"
+                    android:text="Profile Page"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/admin_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profileadmin"
+                    android:layout_marginTop="5dp"
+                    android:text="Admin Id: 2"
+                    android:textSize="14sp"
+                    android:textColor="#666666" />
+
+                <TextView
+                    android:id="@+id/admin_profiletext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/admin_id"
+                    android:layout_marginTop="5dp"
+                    android:text="View profile info and performance."
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/openarrow"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <!-- Submit Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/admin_logout"
+        android:layout_width="350dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="760dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#CE3434"
+        android:text="Logout"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"> <!-- Semi-transparent -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_complaint_card">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin Profile"
+                android:textColor="#FFF"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="#4A4A4C"
+                android:contentDescription="Close"
+                android:src="@drawable/ic_close" />
+        </RelativeLayout>
+
+        <!-- Profile Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="#3A3A3C">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Profile Info -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/hiusername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hi Admin!"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        android:layout_gravity="start" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="60dp"
+                        app:cardElevation="8dp">
+
+                        <ImageView
+                            android:id="@+id/iv_profile_picture"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/defaultprofile" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Vishnu (Admin)"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Admin Details Grid -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="#3A3A3C">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <GridLayout
+                            android:id="@+id/grid_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:columnCount="2"
+                            android:rowCount="2">
+
+                            <!-- Joined Date -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/joined_icon" /> <!-- Replace with calendar icon -->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:id="@+id/tv_joined"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="01/01/2020"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Joined On"
+                                        android:textColor="#AEAEB2"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Role -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/role_icon" /> <!-- Replace with admin/role icon -->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:id="@+id/tv_role"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="District Admin"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Role"
+                                        android:textColor="#AEAEB2"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Total Cases Handled -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/case_icon" /> <!-- Replace with case/resolution icon -->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:id="@+id/tv_cases"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="03"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Cases Resolved"
+                                        android:textColor="#AEAEB2"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Users Managed -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="horizontal"
+                                android:padding="8dp">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/users_icon" /> <!-- Replace with user/group icon -->
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:id="@+id/tv_users"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="05"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Users Managed"
+                                        android:textColor="#AEAEB2"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </GridLayout>
+
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginBottom="17dp"
+                            android:background="@drawable/bordersprofile" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Performance Score Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_performance_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Performance Score"
+                                android:textColor="#000000"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+                            <com.SIMATS.smartcity.ArcGaugeView
+                                android:id="@+id/arcGauge"
+                                android:layout_width="170dp"
+                                android:layout_height="90dp"
+                                android:layout_centerHorizontal="true" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:text="Your current score is based on cases handled,\nresponse speed, and user satisfaction."
+                            android:textColor="#AEAEB2"
+                            android:textSize="12sp"
+                            android:textAlignment="center" />
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="16dp">-->
+<!--                            <TextView-->
+<!--                                android:id="@+id/btn_edit_profile"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Edit"-->
+<!--                                android:textColor="#007AFF"-->
+<!--                                android:textSize="18sp"-->
+<!--                                android:layout_alignParentStart="true" />-->
+<!--                        </RelativeLayout>-->
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

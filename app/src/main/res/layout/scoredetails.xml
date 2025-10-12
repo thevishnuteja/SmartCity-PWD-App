@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"> <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="80dp"
+    android:fillViewport="true"
+    android:background="@drawable/bg_complaint_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                style="@style/TitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Honour Score"
+                android:textColor="#FFF"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="#4A4A4C"
+                android:contentDescription="Close"
+                android:src="@drawable/ic_close" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#3A3A3C"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="17dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Honour Score: 83 / 100"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/metric_reports"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <TextView
+                                android:id="@+id/tv_reports_label"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Reports Submitted Score"
+                                android:textSize="16sp"
+                                android:textColor="#000" />
+
+                            <TextView
+                                android:id="@+id/tv_reports_points"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+30 pts"
+                                android:textColor="#000"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/info_reports"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="8dp"
+                                android:contentDescription="Info"
+                                android:src="@drawable/ic_info" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/metric_accuracy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <TextView
+                                android:id="@+id/tv_accuracy_label"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Validation Score"
+                                android:textColor="#000"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_accuracy_points"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+25 pts"
+                                android:textColor="#000"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/info_accuracy"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="8dp"
+                                android:contentDescription="Info"
+                                android:src="@drawable/ic_info" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/metric_engagement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingVertical="8dp">
+
+                            <TextView
+                                android:id="@+id/tv_engagement_label"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Profile Completion Score"
+                                android:textColor="#000"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_engagement_points"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+8 pts"
+                                android:textColor="#000"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/info_engagement"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="8dp"
+                                android:contentDescription="Info"
+                                android:src="@drawable/ic_info" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/score_complaints_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/rating_animation_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="16dp"
+                    app:lottie_rawRes="@raw/rating"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

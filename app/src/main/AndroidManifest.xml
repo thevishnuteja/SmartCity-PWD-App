@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.SIMATS.smartcity">
+
+    <!-- Permissions for internet and location -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+
+
+    <!--
+      THIS IS THE KEY FIX:
+      The android:name attribute tells the app to run your MySmartCityApplication
+      class first, which forces dark mode for the entire application.
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/applogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/applogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartCity"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:targetApi="n">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAn-5RV7TmZKuQMAFojD0vAzeKzcXXkGgE" />
+
+        <!-- Launcher Activity -->
+        <activity
+            android:name="com.SIMATS.smartcity.actwelcomepage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other Activities -->
+        <activity android:name="com.SIMATS.smartcity.actlogin" android:exported="true" />
+        <activity android:name="com.SIMATS.smartcity.actmainpage" android:exported="false" />
+        <activity android:name="com.SIMATS.smartcity.actsignup" android:exported="false" />
+        <activity android:name="com.SIMATS.smartcity.actforgotpass" android:exported="false" />
+        <activity android:name="com.SIMATS.smartcity.actpassresetconf" android:exported="false" />
+        <activity android:name="com.SIMATS.smartcity.actmannualcomplaint" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.actcomplaintconformation" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.acttrackpage" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.acthistory" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.actemergencypage" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.actprofile" android:exported="false" android:theme="@style/Theme.Transparent"/>
+        <activity android:name="com.SIMATS.smartcity.actcomplaintdetails" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.actscoredetails" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.actprofileedit" android:label="Profile Edit" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.SIMATS.smartcity.actprofileupdateconfirmation" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.actaboutuspage" android:exported="false" android:theme="@style/Theme.Transparent"/>
+        <activity android:name="com.SIMATS.smartcity.acttermandconditions" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.actadmindashboard" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.actadmincomplaintdetails" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.actadmintrackusers" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.actadminprofile" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.adminuserdetails" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.activitylocationpicker" android:exported="false" android:theme="@style/Theme.Transparent" />
+        <activity android:name="com.SIMATS.smartcity.GeminiChatActivity" android:exported="false" android:theme="@style/Theme.Transparent" android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.SIMATS.smartcity.actadminmainpage" />
+
+
+
+
+
+
+    </application>
+
+</manifest>

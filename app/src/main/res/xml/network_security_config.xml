@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        This is the base configuration for your app.
+        By default, it enforces secure (HTTPS) connections.
+    -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!--
+        Create a domain-specific configuration for any domains
+        that absolutely MUST use cleartext (http://).
+
+        IMPORTANT: Replace "your-api-domain.com" with the actual
+        domain you need to connect to via HTTP. For development,
+        you might use an IP address like "10.0.2.2".
+
+        You can have multiple <domain> entries.
+    -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">e84a296d197d.ngrok-free.app</domain>
+<!--        <domain includeSubdomains="true">99afc524bf5d.ngrok-free.app</domain>-->
+        <!-- Example for local development server: -->
+        <!-- <domain includeSubdomains="true">10.0.2.2</domain> -->
+    </domain-config>
+
+</network-security-config>

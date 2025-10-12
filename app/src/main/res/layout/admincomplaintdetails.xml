@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    tools:context=".actadmincomplaintdetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_complaint_card"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header with Title and Close Button -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="#4A4A4C"
+                    android:src="@drawable/ic_close"
+                    android:contentDescription="Close" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complaint Details"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="16dp" />
+            </RelativeLayout>
+
+            <!-- Main White Content Card -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_rounded_white"
+                android:elevation="2dp"
+                android:padding="24dp">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_view_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:shimmer_auto_start="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="120dp"
+                            android:layout_height="16dp"
+                            android:background="@color/placeholder_bg" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@color/placeholder_bg" />
+
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="16dp"
+                            android:background="@color/placeholder_bg" />
+                        <View
+                            android:layout_width="200dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@color/placeholder_bg" />
+
+                        <View
+                            android:layout_width="150dp"
+                            android:layout_height="16dp"
+                            android:background="@color/placeholder_bg" />
+                        <View
+                            android:layout_width="250dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@color/placeholder_bg" />
+
+                        <View
+                            android:layout_width="120dp"
+                            android:layout_height="16dp"
+                            android:background="@color/placeholder_bg" />
+                        <View
+                            android:layout_width="180dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@color/placeholder_bg" />
+
+                        <View
+                            android:layout_width="150dp"
+                            android:layout_height="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@color/placeholder_bg" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:background="@color/placeholder_bg" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:background="@color/placeholder_bg" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="120dp"
+                            android:layout_height="16dp"
+                            android:background="@color/placeholder_bg" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@color/placeholder_bg" />
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/real_content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible"> <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Issue Details:"
+                    android:textSize="16sp"
+                    android:textColor="#757575" />
+                    <TextView
+                        android:id="@+id/complaint_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="User's complaint description here."
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location:"
+                        android:textSize="16sp"
+                        android:textColor="#757575" />
+                    <TextView
+                        android:id="@+id/location_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Vijayawada"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date and Time:"
+                        android:textSize="16sp"
+                        android:textColor="#757575" />
+                    <TextView
+                        android:id="@+id/date_time_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="06-Aug-2025 10:45 AM"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Complaint ID:"
+                        android:textSize="16sp"
+                        android:textColor="#757575" />
+                    <TextView
+                        android:id="@+id/complaint_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="123456"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Uploaded Images:"
+                        android:textSize="16sp"
+                        android:textColor="#757575"
+                        android:layout_marginBottom="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:id="@+id/image1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop" />
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_loader1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:lottie_rawRes="@raw/loader"
+                                    app:lottie_autoPlay="true"
+                                    app:lottie_loop="true"
+                                    android:visibility="gone"
+                                    tools:visibility="visible"/>
+                            </FrameLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="150dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp">
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:id="@+id/image2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop" />
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_loader2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:lottie_rawRes="@raw/loader"
+                                    app:lottie_autoPlay="true"
+                                    app:lottie_loop="true"
+                                    android:visibility="gone"
+                                    tools:visibility="visible"/>
+                            </FrameLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change Status:"
+                        android:textColor="#757575"
+                        android:textSize="16sp" />
+                    <RadioGroup
+                        android:id="@+id/status_radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp">
+                        <RadioButton
+                            android:id="@+id/status_pending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pending"
+                            android:checked="true" />
+                        <RadioButton
+                            android:id="@+id/status_completed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Completed"
+                            android:layout_marginStart="16dp" />
+                        <RadioButton
+                            android:id="@+id/status_rejected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rejected"
+                            android:layout_marginStart="16dp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/update_complaint"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="6dp"
+                    android:backgroundTint="#007AFF"
+                    android:text="Update Complaint"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/transfercomplaint"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#FFC107"
+                    android:text="Transfer Complaint"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+

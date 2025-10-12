@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"> <!-- Semi-transparent background -->
+
+    <!-- Main Card Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bg_complaint_card"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Section -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="IN CASE OF EMERGENCY"
+                android:textColor="#FF0000"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="#4A4A4C"
+                android:contentDescription="Close"
+                android:src="@drawable/ic_close" />
+        </RelativeLayout>
+
+        <!-- Scrollable Emergency Contacts -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <!-- One LinearLayout to hold all the contacts -->
+            <LinearLayout
+                android:id="@+id/emergencycontact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Emergency Contact Block Template -->
+                <LinearLayout style="@style/EmergencyBlockStyle">
+                    <TextView
+                        android:id="@+id/tv_helpline"
+                        style="@style/EmergencyTitle"
+                        android:text="PWD Helpline" />
+                    <TextView
+                        android:id="@+id/tv_helpline_number"
+                        style="@style/EmergencyNumber"
+                        android:text="Tap to Call 1800-xxxx-001" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/EmergencyBlockStyle">
+                    <TextView
+                        android:id="@+id/tv_electricity"
+                        style="@style/EmergencyTitle"
+                        android:text="Electricity Emergency" />
+                    <TextView
+                        android:id="@+id/tv_electricity_number"
+                        style="@style/EmergencyNumber"
+                        android:text="Tap to Call 1912" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/EmergencyBlockStyle">
+                    <TextView
+                        android:id="@+id/tv_water_supply"
+                        style="@style/EmergencyTitle"
+                        android:text="Water Supply Emergency" />
+                    <TextView
+                        android:id="@+id/tv_water_supply_number"
+                        style="@style/EmergencyNumber"
+                        android:text="Tap to Call 1916" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/EmergencyBlockStyle">
+                    <TextView
+                        android:id="@+id/tv_municipal_waste"
+                        style="@style/EmergencyTitle"
+                        android:text="Municipal Waste Complaint" />
+                    <TextView
+                        android:id="@+id/tv_municipal_waste_number"
+                        style="@style/EmergencyNumber"
+                        android:text="Tap to Call 155304" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/EmergencyBlockStyle">
+                    <TextView
+                        android:id="@+id/tv_disaster_management"
+                        style="@style/EmergencyTitle"
+                        android:text="Disaster Management" />
+                    <TextView
+                        android:id="@+id/tv_disaster_management_number"
+                        style="@style/EmergencyNumber"
+                        android:text="Tap to Call 108" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/EmergencyBlockStyle">
+                    <TextView
+                        android:id="@+id/tv_road_repairs"
+                        style="@style/EmergencyTitle"
+                        android:text="Road Repairs (PWD)" />
+                    <TextView
+                        android:id="@+id/tv_road_repairs_number"
+                        style="@style/EmergencyNumber"
+                        android:text="Tap to Call 1800 xxxx 002" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/EmergencyBlockStyle">
+                    <TextView
+                        android:id="@+id/tv_senior_citizen"
+                        style="@style/EmergencyTitle"
+                        android:text="Senior Citizen Helpline" />
+                    <TextView
+                        android:id="@+id/tv_senior_citizen_number"
+                        style="@style/EmergencyNumber"
+                        android:text="Tap to Call 14567" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/EmergencyBlockStyle">
+                    <TextView
+                        android:id="@+id/tv_gas_leak"
+                        style="@style/EmergencyTitle"
+                        android:text="Gas Leak (LPG)" />
+                    <TextView
+                        android:id="@+id/tv_gas_leak_number"
+                        style="@style/EmergencyNumber"
+                        android:text="Tap to Call 1906" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/EmergencyBlockStyle">
+                    <TextView
+                        android:id="@+id/tv_public_health"
+                        style="@style/EmergencyTitle"
+                        android:text="Public Health Dept" />
+                    <TextView
+                        android:id="@+id/tv_public_health_number"
+                        style="@style/EmergencyNumber"
+                        android:text="Tap to Call 104" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

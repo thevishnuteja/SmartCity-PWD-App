@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">SmartCity</string>
+
+    <string name="email_hint">Your E-mail Address</string>
+    <string name="password_hint">Password</string>
+    <string name="server_web_client_id" translatable="false">120958731771-5eib0644csim65jqdctihs0p2isb4a5u.apps.googleusercontent.com</string>
+
+    <string name="login_title">Smart City - PWD Neighborhood</string>
+    <string name="login_label">Login</string>
+    <string name="password_label">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="no_account_prompt">If you don\'t have an account yet?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login_error_empty_fields">Please enter both email and password.</string>
+    <string name="login_error_generic">Error opening main page: %1$s</string>
+    <string name="manual_complaint">Manual Complaint</string>
+    <string name="issue_type_prompt">Select Issue Type</string>
+    <string name="user_name">User Name</string>
+    <string name="issue_details">Issue Details</string>
+    <string name="date_time_issue">Date and Time of the Issue</string>
+    <string name="location_issue">Location of Issue</string>
+    <string name="landmark_nearby">Landmark / Nearby Spot</string>
+    <string name="additional_info">Additional Information</string>
+    <string name="submit_complaint">Submit Complaint</string>
+    <string name="privacy_terms">By submitting, you agree to the app\'s Privacy Policy and Terms of Service.</string>
+    <string name="attachments_files">Attachments Files here</string>
+    <string name="close">Close</string>
+
+    <!-- Issue Types -->
+    <string-array name="issue_types">
+        <item>Water Supply Issue</item>
+        <item>Electricity Problem</item>
+        <item>Road Maintenance</item>
+        <item>Garbage Collection</item>
+        <item>Street Light</item>
+        <item>Drainage Problem</item>
+        <item>Noise Complaint</item>
+        <item>Other</item>
+    </string-array>
+</resources>

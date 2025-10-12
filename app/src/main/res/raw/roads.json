@@ -1,0 +1,813 @@
+{
+  "roads": [
+    {
+      "name": "Outer Ring Road, Hyderabad",
+      "status": "developed",
+      "properties": {
+        "id": "HYD-ORR-01",
+        "type": "Expressway",
+        "lanes": 8,
+        "maintained_by": "HGCL",
+        "last_maintained": "2025-03-15",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 17.4949, "lng": 78.3998},
+        {"lat": 17.5143, "lng": 78.5498},
+        {"lat": 17.3616, "lng": 78.5747},
+        {"lat": 17.2543, "lng": 78.4498},
+        {"lat": 17.3316, "lng": 78.3147},
+        {"lat": 17.4949, "lng": 78.3998}
+      ]
+    },
+    {
+      "name": "Regional Ring Road, Hyderabad (South)",
+      "status": "under_development",
+      "properties": {
+        "id": "HYD-RRR-S-01",
+        "type": "Expressway",
+        "lanes": 4,
+        "maintained_by": "NHAI / State Govt",
+        "last_maintained": null,
+        "project_details": "Land acquisition and southern corridor development.",
+        "expected_completion": "2028-12-31"
+      },
+      "path": [
+        {"lat": 17.0772, "lng": 78.3340},
+        {"lat": 17.1592, "lng": 78.8055},
+        {"lat": 17.0581, "lng": 79.1534}
+      ]
+    },
+    {
+      "name": "Inner Ring Road, Hyderabad",
+      "status": "developed",
+      "properties": {
+        "id": "HYD-IRR-01",
+        "type": "City Arterial Road",
+        "lanes": 6,
+        "maintained_by": "GHMC",
+        "last_maintained": "2024-08-20",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 17.4168, "lng": 78.4355},
+        {"lat": 17.4429, "lng": 78.4865},
+        {"lat": 17.4121, "lng": 78.5306},
+        {"lat": 17.3683, "lng": 78.5130},
+        {"lat": 17.3697, "lng": 78.4485},
+        {"lat": 17.4168, "lng": 78.4355}
+      ]
+    },
+    {
+      "name": "NH-44 (Hyderabad-Bengaluru Stretch)",
+      "status": "developed",
+      "properties": {
+        "id": "NH44-HYD-BLR",
+        "type": "National Highway",
+        "lanes": 6,
+        "maintained_by": "NHAI",
+        "last_maintained": "2023-11-10",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 17.3850, "lng": 78.4867},
+        {"lat": 16.5550, "lng": 77.8340},
+        {"lat": 14.6819, "lng": 77.6006},
+        {"lat": 12.9716, "lng": 77.5946}
+      ]
+    },
+    {
+      "name": "Bengaluru Outer Ring Road (ORR)",
+      "status": "developed",
+      "properties": {
+        "id": "BLR-ORR-01",
+        "type": "City Arterial Road",
+        "lanes": 6,
+        "maintained_by": "BBMP",
+        "last_maintained": "2025-01-20",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 12.9177, "lng": 77.6229},
+        {"lat": 12.9716, "lng": 77.7499},
+        {"lat": 13.0489, "lng": 77.6436},
+        {"lat": 13.0358, "lng": 77.5273},
+        {"lat": 12.9177, "lng": 77.6229}
+      ]
+    },
+    {
+      "name": "Chennai Bypass Expressway",
+      "status": "developed",
+      "properties": {
+        "id": "CHE-BP-01",
+        "type": "Expressway",
+        "lanes": 4,
+        "maintained_by": "NHAI",
+        "last_maintained": "2024-10-05",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 13.0827, "lng": 80.2707},
+        {"lat": 13.0069, "lng": 80.1519},
+        {"lat": 12.9234, "lng": 80.1345}
+      ]
+    },
+    {
+      "name": "Delhi-Meerut Expressway",
+      "status": "developed",
+      "properties": {
+        "id": "DEL-MEE-01",
+        "type": "Expressway",
+        "lanes": 14,
+        "maintained_by": "NHAI",
+        "last_maintained": "2025-04-01",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 28.6322, "lng": 77.2941},
+        {"lat": 28.7901, "lng": 77.6120},
+        {"lat": 28.9845, "lng": 77.7064}
+      ]
+    },
+    {
+      "name": "Ahmedabad-Dholera Expressway",
+      "status": "under_development",
+      "properties": {
+        "id": "AHM-DHL-01",
+        "type": "Expressway",
+        "lanes": 4,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Construction of greenfield expressway to connect Ahmedabad with Dholera SIR.",
+        "expected_completion": "2026-08-20"
+      },
+      "path": [
+        {"lat": 23.0225, "lng": 72.5714},
+        {"lat": 22.7500, "lng": 72.4800},
+        {"lat": 22.2500, "lng": 72.3700}
+      ]
+    },
+    {
+      "name": "Grand Southern Trunk Road (NH-32)",
+      "status": "developed",
+      "properties": {
+        "id": "NH32-CHE-01",
+        "type": "National Highway",
+        "lanes": 6,
+        "maintained_by": "NHAI",
+        "last_maintained": "2024-12-11",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 13.0843, "lng": 80.2707},
+        {"lat": 12.6865, "lng": 79.9924},
+        {"lat": 12.0232, "lng": 79.7615}
+      ]
+    },
+    {
+      "name": "Dwarka Expressway (Northern Peripheral Road)",
+      "status": "under_development",
+      "properties": {
+        "id": "DEL-DWE-01",
+        "type": "Expressway",
+        "lanes": 8,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Final stages of construction for the Gurgaon section.",
+        "expected_completion": "2026-03-31"
+      },
+      "path": [
+        {"lat": 28.5952, "lng": 77.0322},
+        {"lat": 28.5144, "lng": 76.9452},
+        {"lat": 28.4595, "lng": 77.0266}
+      ]
+    },
+    {
+      "name": "Mumbai-Pune Expressway",
+      "status": "developed",
+      "properties": {
+        "id": "MUM-PUN-EXP-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "MSRDC",
+        "last_maintained": "2025-05-22",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 18.9669, "lng": 73.0033},
+        {"lat": 18.7565, "lng": 73.3855},
+        {"lat": 18.5204, "lng": 73.8567}
+      ]
+    },
+    {
+      "name": "Jaipur Ring Road",
+      "status": "developed",
+      "properties": {
+        "id": "JAI-RR-01",
+        "type": "Ring Road",
+        "lanes": 6,
+        "maintained_by": "JDA",
+        "last_maintained": "2023-10-30",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 26.8360, "lng": 75.8236},
+        {"lat": 26.7865, "lng": 75.9011},
+        {"lat": 26.8911, "lng": 75.9682},
+        {"lat": 26.9749, "lng": 75.8398},
+        {"lat": 26.8360, "lng": 75.8236}
+      ]
+    },
+    {
+      "name": "Nagpur-Mumbai Super Communication Expressway",
+      "status": "under_development",
+      "properties": {
+        "id": "NAG-MUM-EXP-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "MSRDC",
+        "last_maintained": null,
+        "project_details": "Final sections near Mumbai under construction.",
+        "expected_completion": "2026-07-25"
+      },
+      "path": [
+        {"lat": 21.1458, "lng": 79.0882},
+        {"lat": 19.9975, "lng": 75.3433},
+        {"lat": 19.2288, "lng": 72.8540}
+      ]
+    },
+    {
+      "name": "Visakhapatnam Beach Corridor Widening",
+      "status": "under_development",
+      "properties": {
+        "id": "VIZ-BCW-01",
+        "type": "City Arterial Road",
+        "lanes": 4,
+        "maintained_by": "GVMC",
+        "last_maintained": null,
+        "project_details": "Widening of road from Coastal Battery to Bheemili.",
+        "expected_completion": "2027-02-14"
+      },
+      "path": [
+        {"lat": 17.7126, "lng": 83.3185},
+        {"lat": 17.7554, "lng": 83.3516},
+        {"lat": 17.8863, "lng": 83.4475}
+      ]
+    },
+    {
+      "name": "Lucknow Outer Ring Road",
+      "status": "under_development",
+      "properties": {
+        "id": "LKO-ORR-01",
+        "type": "Ring Road",
+        "lanes": 8,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Construction ongoing in multiple packages.",
+        "expected_completion": "2026-10-10"
+      },
+      "path": [
+        {"lat": 26.9123, "lng": 80.9462},
+        {"lat": 26.7606, "lng": 80.9029},
+        {"lat": 26.8467, "lng": 81.0237},
+        {"lat": 26.9123, "lng": 80.9462}
+      ]
+    },
+    {
+      "name": "SH-49 East Coast Road (Chennai-Puducherry)",
+      "status": "developed",
+      "properties": {
+        "id": "SH49-ECR-01",
+        "type": "State Highway",
+        "lanes": 4,
+        "maintained_by": "TNRDC",
+        "last_maintained": "2025-02-01",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 12.9863, "lng": 80.2526},
+        {"lat": 12.2586, "lng": 80.1470},
+        {"lat": 11.9139, "lng": 79.8145}
+      ]
+    },
+    {
+      "name": "Yamuna Expressway (Greater Noida-Agra)",
+      "status": "developed",
+      "properties": {
+        "id": "YEIDA-EXP-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "YEIDA",
+        "last_maintained": "2025-06-10",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 28.3753, "lng": 77.5186},
+        {"lat": 27.8189, "lng": 77.8369},
+        {"lat": 27.1767, "lng": 78.0081}
+      ]
+    },
+    {
+      "name": "Chandigarh-Manali Highway (NH-3)",
+      "status": "developed",
+      "properties": {
+        "id": "NH3-CHD-MNL",
+        "type": "National Highway",
+        "lanes": 4,
+        "maintained_by": "NHAI",
+        "last_maintained": "2024-07-15",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 30.7333, "lng": 76.7794},
+        {"lat": 31.4089, "lng": 76.9298},
+        {"lat": 32.2396, "lng": 77.1887}
+      ]
+    },
+    {
+      "name": "Raipur-Visakhapatnam Economic Corridor",
+      "status": "under_development",
+      "properties": {
+        "id": "EC-RPR-VIZ-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Greenfield project under Bharatmala Pariyojana, construction started.",
+        "expected_completion": "2027-12-31"
+      },
+      "path": [
+        {"lat": 21.2514, "lng": 81.6296},
+        {"lat": 19.5300, "lng": 82.8300},
+        {"lat": 17.6868, "lng": 83.2185}
+      ]
+    },
+    {
+      "name": "Sardar Patel Ring Road, Ahmedabad",
+      "status": "developed",
+      "properties": {
+        "id": "AHM-SPRR-01",
+        "type": "Ring Road",
+        "lanes": 6,
+        "maintained_by": "AUDA",
+        "last_maintained": "2025-03-03",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 23.0945, "lng": 72.5050},
+        {"lat": 23.0903, "lng": 72.6780},
+        {"lat": 22.9262, "lng": 72.6288},
+        {"lat": 22.9698, "lng": 72.4633},
+        {"lat": 23.0945, "lng": 72.5050}
+      ]
+    },
+    {
+      "name": "Surat-Chennai Expressway",
+      "status": "under_development",
+      "properties": {
+        "id": "SUR-CHE-EXP-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Alignment and survey work completed. Land acquisition initiated in parts.",
+        "expected_completion": "2029-12-01"
+      },
+      "path": [
+        {"lat": 21.1702, "lng": 72.8311},
+        {"lat": 18.0196, "lng": 75.3667},
+        {"lat": 14.5900, "lng": 78.4800},
+        {"lat": 13.0827, "lng": 80.2707}
+      ]
+    },
+    {
+      "name": "Old Mahabalipuram Road (IT Corridor), Chennai",
+      "status": "developed",
+      "properties": {
+        "id": "CHE-OMR-01",
+        "type": "City Arterial Road",
+        "lanes": 6,
+        "maintained_by": "TNRDC",
+        "last_maintained": "2025-01-10",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 12.9904, "lng": 80.2477},
+        {"lat": 12.8986, "lng": 80.2285},
+        {"lat": 12.8222, "lng": 80.2272}
+      ]
+    },
+    {
+      "name": "Mumbai-Ahmedabad High-Speed Rail Corridor Service Road",
+      "status": "under_development",
+      "properties": {
+        "id": "MAHSR-SR-01",
+        "type": "Service Road",
+        "lanes": 2,
+        "maintained_by": "NHSRCL",
+        "last_maintained": null,
+        "project_details": "Development of service road alongside the bullet train corridor.",
+        "expected_completion": "2028-10-20"
+      },
+      "path": [
+        {"lat": 19.0760, "lng": 72.8777},
+        {"lat": 21.1702, "lng": 72.8311},
+        {"lat": 23.0225, "lng": 72.5714}
+      ]
+    },
+    {
+      "name": "Ganga Expressway (Meerut-Prayagraj)",
+      "status": "under_development",
+      "properties": {
+        "id": "GANGA-EXP-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "UPEIDA",
+        "last_maintained": null,
+        "project_details": "Earthwork and structure construction in full swing.",
+        "expected_completion": "2027-03-31"
+      },
+      "path": [
+        {"lat": 28.9845, "lng": 77.7064},
+        {"lat": 27.2000, "lng": 79.9100},
+        {"lat": 25.4358, "lng": 81.8463}
+      ]
+    },
+    {
+      "name": "Bengaluru-Mysuru Expressway (NH-275)",
+      "status": "developed",
+      "properties": {
+        "id": "NH275-BLR-MYS",
+        "type": "Expressway",
+        "lanes": 10,
+        "maintained_by": "NHAI",
+        "last_maintained": "2025-04-12",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 12.9134, "lng": 77.5165},
+        {"lat": 12.6300, "lng": 77.1000},
+        {"lat": 12.2958, "lng": 76.6394}
+      ]
+    },
+    {
+      "name": "Kalyan-Dombivli Ring Road",
+      "status": "under_development",
+      "properties": {
+        "id": "KDMC-RR-01",
+        "type": "Ring Road",
+        "lanes": 4,
+        "maintained_by": "MMRDA",
+        "last_maintained": null,
+        "project_details": "Phase 3 of the ring road project is under construction.",
+        "expected_completion": "2027-11-05"
+      },
+      "path": [
+        {"lat": 19.2183, "lng": 73.1730},
+        {"lat": 19.1600, "lng": 73.0900},
+        {"lat": 19.2400, "lng": 73.0800},
+        {"lat": 19.2183, "lng": 73.1730}
+      ]
+    },
+    {
+      "name": "Amritsar-Jamnagar Economic Corridor",
+      "status": "under_development",
+      "properties": {
+        "id": "EC-ASR-JAM-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Construction underway, connecting key refineries and economic zones.",
+        "expected_completion": "2026-12-15"
+      },
+      "path": [
+        {"lat": 31.6340, "lng": 74.8723},
+        {"lat": 28.0229, "lng": 73.3119},
+        {"lat": 25.4087, "lng": 71.3689},
+        {"lat": 22.4707, "lng": 70.0577}
+      ]
+    },
+    {
+      "name": "Sohna Elevated Road, Gurgaon",
+      "status": "developed",
+      "properties": {
+        "id": "GGN-SER-01",
+        "type": "Elevated Corridor",
+        "lanes": 6,
+        "maintained_by": "NHAI",
+        "last_maintained": "2024-08-30",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 28.4089, "lng": 77.0423},
+        {"lat": 28.3188, "lng": 77.0691},
+        {"lat": 28.2438, "lng": 77.0850}
+      ]
+    },
+    {
+      "name": "Delhi-Dehradun Economic Corridor",
+      "status": "under_development",
+      "properties": {
+        "id": "EC-DEL-DED-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Construction in advanced stages, includes Asia's largest wildlife corridor.",
+        "expected_completion": "2026-05-30"
+      },
+      "path": [
+        {"lat": 28.7041, "lng": 77.1025},
+        {"lat": 29.5800, "lng": 77.7200},
+        {"lat": 30.3165, "lng": 78.0322}
+      ]
+    },
+    {
+      "name": "Vijayawada-Bengaluru Expressway",
+      "status": "under_development",
+      "properties": {
+        "id": "BZA-BLR-EXP-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Proposed greenfield corridor, survey and DPR preparation stage.",
+        "expected_completion": "2030-01-01"
+      },
+      "path": [
+        {"lat": 16.5062, "lng": 80.6480},
+        {"lat": 14.4674, "lng": 78.8242},
+        {"lat": 12.9716, "lng": 77.5946}
+      ]
+    },
+    {
+      "name": "Madurai-Chennai Economic Corridor",
+      "status": "under_development",
+      "properties": {
+        "id": "EC-IXM-MAA-01",
+        "type": "Expressway",
+        "lanes": 8,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Development of a new alignment to reduce travel time.",
+        "expected_completion": "2028-11-20"
+      },
+      "path": [
+        {"lat": 9.9252, "lng": 78.1198},
+        {"lat": 11.5000, "lng": 79.2000},
+        {"lat": 13.0827, "lng": 80.2707}
+      ]
+    },
+    {
+      "name": "Srinagar-Leh Tunnel Access Road",
+      "status": "developed",
+      "properties": {
+        "id": "SXR-LEH-TAR-01",
+        "type": "National Highway",
+        "lanes": 2,
+        "maintained_by": "BRO",
+        "last_maintained": "2025-08-20",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 34.2253, "lng": 75.3344},
+        {"lat": 34.2871, "lng": 75.9555},
+        {"lat": 34.1526, "lng": 77.5771}
+      ]
+    },
+    {
+      "name": "Vadodara-Mumbai Expressway Link",
+      "status": "developed",
+      "properties": {
+        "id": "BDQ-BOM-LINK-01",
+        "type": "Expressway",
+        "lanes": 8,
+        "maintained_by": "NHAI",
+        "last_maintained": "2025-09-01",
+        "project_details": null,
+        "expected_completion": null
+      },
+      "path": [
+        {"lat": 22.3072, "lng": 73.1812},
+        {"lat": 21.7645, "lng": 72.9032},
+        {"lat": 19.2183, "lng": 72.9781}
+      ]
+    },
+    {
+      "name": "Nashik Industrial Corridor Road",
+      "status": "under_development",
+      "properties": {
+        "id": "ISK-ICR-01",
+        "type": "City Arterial Road",
+        "lanes": 6,
+        "maintained_by": "NMC",
+        "last_maintained": null,
+        "project_details": "Improving connectivity to Ambad and Satpur industrial areas.",
+        "expected_completion": "2027-04-20"
+      },
+      "path": [
+        {"lat": 19.9975, "lng": 73.7898},
+        {"lat": 19.9650, "lng": 73.7500},
+        {"lat": 20.0100, "lng": 73.7300}
+      ]
+    },
+    {
+      "name": "Faridabad-Noida-Ghaziabad Expressway (FNG)",
+      "status": "under_development",
+      "properties": {
+        "id": "FNG-EXP-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Construction ongoing on multiple stretches to connect the three cities.",
+        "expected_completion": "2027-09-30"
+      },
+      "path": [
+        {"lat": 28.4089, "lng": 77.3178},
+        {"lat": 28.5355, "lng": 77.3910},
+        {"lat": 28.6692, "lng": 77.4538}
+      ]
+    },
+    {
+      "name": "Meerut Inner Ring Road",
+      "status": "under_development",
+      "properties": {
+        "id": "MTC-IRR-01",
+        "type": "Ring Road",
+        "lanes": 4,
+        "maintained_by": "Meerut Development Authority",
+        "last_maintained": null,
+        "project_details": "Final phase connecting Hapur Road to Delhi Road.",
+        "expected_completion": "2027-01-15"
+      },
+      "path": [
+        {"lat": 28.9845, "lng": 77.7064},
+        {"lat": 28.9500, "lng": 77.6800},
+        {"lat": 29.0100, "lng": 77.7200},
+        {"lat": 28.9845, "lng": 77.7064}
+      ]
+    },
+    {
+      "name": "Vasai-Virar Coastal Road",
+      "status": "under_development",
+      "properties": {
+        "id": "VV-CR-01",
+        "type": "Expressway",
+        "lanes": 8,
+        "maintained_by": "MMRDA",
+        "last_maintained": null,
+        "project_details": "Connecting Virar with the Mumbai Coastal Road.",
+        "expected_completion": "2029-06-20"
+      },
+      "path": [
+        {"lat": 19.4673, "lng": 72.8123},
+        {"lat": 19.3500, "lng": 72.8000},
+        {"lat": 19.2847, "lng": 72.8465}
+      ]
+    },
+    {
+      "name": "Dehradun-Mussoorie Ropeway Service Road",
+      "status": "under_development",
+      "properties": {
+        "id": "DED-MUS-RSR-01",
+        "type": "Service Road",
+        "lanes": 2,
+        "maintained_by": "State Govt",
+        "last_maintained": null,
+        "project_details": "Construction of access road for the ropeway project.",
+        "expected_completion": "2026-11-10"
+      },
+      "path": [
+        {"lat": 30.3165, "lng": 78.0322},
+        {"lat": 30.3800, "lng": 78.0500},
+        {"lat": 30.4594, "lng": 78.0645}
+      ]
+    },
+    {
+      "name": "Salem-Coimbatore Greenfield Corridor",
+      "status": "under_development",
+      "properties": {
+        "id": "SXV-CJB-GC-01",
+        "type": "Expressway",
+        "lanes": 8,
+        "maintained_by": "NHAI",
+        "last_maintained": null,
+        "project_details": "Part of Chennai-Salem expressway, facing land acquisition hurdles.",
+        "expected_completion": "2029-10-15"
+      },
+      "path": [
+        {"lat": 11.6643, "lng": 78.1460},
+        {"lat": 11.3410, "lng": 77.7172},
+        {"lat": 11.0168, "lng": 76.9558}
+      ]
+    },
+    {
+      "name": "Tiruchirappalli Riverfront Road",
+      "status": "under_development",
+      "properties": {
+        "id": "TRZ-RFR-01",
+        "type": "City Arterial Road",
+        "lanes": 4,
+        "maintained_by": "Trichy Corporation",
+        "last_maintained": null,
+        "project_details": "Development of a new road along the Cauvery river bank.",
+        "expected_completion": "2026-07-20"
+      },
+      "path": [
+        {"lat": 10.8274, "lng": 78.6898},
+        {"lat": 10.8300, "lng": 78.6500},
+        {"lat": 10.8100, "lng": 78.7200}
+      ]
+    },
+    {
+      "name": "Kolhapur-Ratnagiri Coastal Link",
+      "status": "under_development",
+      "properties": {
+        "id": "KOP-RTN-CL-01",
+        "type": "State Highway",
+        "lanes": 4,
+        "maintained_by": "MSRDC",
+        "last_maintained": null,
+        "project_details": "Upgrading existing highway to improve port connectivity.",
+        "expected_completion": "2027-12-05"
+      },
+      "path": [
+        {"lat": 16.7050, "lng": 74.2433},
+        {"lat": 16.8500, "lng": 73.8000},
+        {"lat": 16.9912, "lng": 73.3000}
+      ]
+    },
+    {
+      "name": "Nellore Port Expressway",
+      "status": "under_development",
+      "properties": {
+        "id": "NLR-PE-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "Krishnapatnam Port Company",
+        "last_maintained": null,
+        "project_details": "Developing a dedicated freight corridor to NH-16.",
+        "expected_completion": "2026-10-31"
+      },
+      "path": [
+        {"lat": 14.4426, "lng": 79.9865},
+        {"lat": 14.3500, "lng": 80.0500},
+        {"lat": 14.2530, "lng": 80.1226}
+      ]
+    },
+    {
+      "name": "Bhavnagar-Alang Coastal Road",
+      "status": "under_development",
+      "properties": {
+        "id": "BHU-ALN-CR-01",
+        "type": "State Highway",
+        "lanes": 4,
+        "maintained_by": "GMB",
+        "last_maintained": null,
+        "project_details": "Widening road to support the ship-breaking industry.",
+        "expected_completion": "2027-03-20"
+      },
+      "path": [
+        {"lat": 21.7645, "lng": 72.1519},
+        {"lat": 21.6000, "lng": 72.2000},
+        {"lat": 21.3980, "lng": 72.1793}
+      ]
+    },
+    {
+      "name": "Thane-Borivali Underground Tunnel",
+      "status": "under_development",
+      "properties": {
+        "id": "THN-BOR-UT-01",
+        "type": "Expressway",
+        "lanes": 6,
+        "maintained_by": "MMRDA",
+        "last_maintained": null,
+        "project_details": "Twin tunnel project under Sanjay Gandhi National Park.",
+        "expected_completion": "2029-12-31"
+      },
+      "path": [
+        {"lat": 19.2288, "lng": 72.9781},
+        {"lat": 19.2298, "lng": 72.8695}
+      ]
+    }
+  ]
+}

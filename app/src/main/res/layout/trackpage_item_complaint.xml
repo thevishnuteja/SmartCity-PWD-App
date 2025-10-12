@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/rounded_corners"> <!-- Rounded background -->
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/tv_complaint_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:paddingBottom="4dp"
+        android:text="Issue Type" />
+
+    <!-- Issue Details TextView -->
+    <TextView
+        android:id="@+id/tv_complaint_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:text="Issue Details" />
+
+    <!-- Status TextView -->
+    <TextView
+        android:id="@+id/tv_complaint_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#FF0000"
+        android:text="Status" />
+
+</LinearLayout>

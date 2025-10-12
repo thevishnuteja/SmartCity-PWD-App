@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/welcome_scr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/logo_area"
+        android:layout_width="wrap_content"
+        android:layout_height="498dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/item2" />
+
+    <!-- App Title centered at the top -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Smart City - PWD Neighborhood"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Subtitle Text centered horizontally just above the buttons -->
+
+    <!-- Get Started Button centered at the bottom -->
+
+    <TextView
+        android:id="@+id/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:layout_marginTop="530dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Make your organization complain free with\n“Smart City - PWD Neighborhood App”"
+        android:textColor="#CCCCCC"
+        android:textSize="14sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_get_started"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sub_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#3D5AFE"
+        android:text="Get started"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:cornerRadius="19dp" />
+    <com.google.android.material.button.MaterialButton
+    android:id="@+id/btn_have_account"
+    android:layout_width="341dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/btn_get_started"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:backgroundTint="#2C2C2C"
+    android:text="I have an account"
+    android:textColor="#FFFFFF"
+    app:cornerRadius="19dp" />
+</RelativeLayout>

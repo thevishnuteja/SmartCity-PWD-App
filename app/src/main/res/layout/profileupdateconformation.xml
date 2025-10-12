@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"> <!-- Semi-transparent background -->
+
+    <!-- This is the outer, dark card with rounded top corners -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_complaint_card"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Action Buttons (Placed outside the white card) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="615dp"
+                android:background="@drawable/bg_rounded_white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:padding="24dp">
+
+                <!-- Success Icon -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/tick_conformation" />
+
+                <!-- Success Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Your profile is Updated"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- Success Subtitle -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Your information was successfully saved"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <!-- Back to Home Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_back_home"
+                    android:layout_width="210dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="1dp"
+                    android:backgroundTint="#E5F1FF"
+                    android:text="Back to Home"
+                    android:textColor="#007AFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="#007AFF"
+                    app:strokeWidth="2dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- View Profile Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_view_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#007AFF"
+                    android:text="View Profile"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
