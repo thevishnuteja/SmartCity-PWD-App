@@ -46,7 +46,7 @@
 
         <!-- Launcher Activity -->
         <activity
-            android:name="com.SIMATS.smartcity.actwelcomepage"
+            android:name="com.SIMATS.smartcity.actsubscribepage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,6 +55,7 @@
         </activity>
 
         <!-- Other Activities -->
+        <activity android:name="com.SIMATS.smartcity.actwelcomepage" android:exported="true" />
         <activity android:name="com.SIMATS.smartcity.actlogin" android:exported="true" />
         <activity android:name="com.SIMATS.smartcity.actmainpage" android:exported="false" />
         <activity android:name="com.SIMATS.smartcity.actsignup" android:exported="false" />

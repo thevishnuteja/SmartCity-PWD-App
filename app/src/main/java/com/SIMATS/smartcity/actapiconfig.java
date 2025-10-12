@@ -7,7 +7,7 @@ public class actapiconfig {
     private static final String LOCAL_URL = "http://" + LOCAL_IP + "/smartcity/";
 
     // Ngrok URL (used when on mobile data or external)
-    private static final String NGROK_URL = "https://e84a296d197d.ngrok-free.app/smartcity/"; // Replace with your live ngrok URL
+    private static final String NGROK_URL = "http://14.139.187.229:8081/PDD-2025(9thmonth)/smartcity_backend-main/smartcity/"; // Replace with your live ngrok URL
 
     // Function to get Local API URL
     public static String getLocalAPI() {
