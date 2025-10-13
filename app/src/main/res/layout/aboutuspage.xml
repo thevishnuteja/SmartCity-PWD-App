@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Developed by: Vishnu Teja\nVersion: 1.0.0\nContact: support@smartcity.com"
+                    android:text="Developed by: Vishnu Teja\nVersion: 1.0.0\nContact: smartcityapp.team@gmail.com"
                     android:textColor="#555555"
                     android:textSize="14sp" />
             </LinearLayout>
