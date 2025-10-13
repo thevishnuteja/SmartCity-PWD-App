@@ -62,6 +62,9 @@ dependencies {
     implementation("com.google.android.gms:play-services-location:21.3.0")
     implementation("com.google.android.libraries.places:places:3.5.0")
 
+    implementation("com.android.billingclient:billing:6.1.0")
+    implementation("com.google.guava:guava:33.2.1-android")
+
     // Gemini AI & Required Guava Library
     implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
     implementation("com.google.guava:guava:33.2.1-android")
