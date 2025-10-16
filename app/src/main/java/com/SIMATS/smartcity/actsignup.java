@@ -3,8 +3,10 @@ package com.SIMATS.smartcity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -33,12 +35,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class actsignup extends AppCompatActivity {
-    // --- Views for regular signup ---
     private EditText etUsername, etEmail, etPassword, etReenter;
     private Button btnGetStarted, btnSignIn;
     private ProgressBar passwordStrengthBar;
 
-    // --- NEW: Variables for Google Sign-Up ---
     private GoogleSignInClient mGoogleSignInClient;
     private ActivityResultLauncher<Intent> googleSignInLauncher;
     private SessionManager sessionManager;
@@ -49,7 +49,6 @@ public class actsignup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signuppage);
 
-        // === Initialize all views ===
         etUsername = findViewById(R.id.et_username);
         etEmail = findViewById(R.id.et_email);
         etPassword = findViewById(R.id.et_password);
@@ -59,20 +58,14 @@ public class actsignup extends AppCompatActivity {
         passwordStrengthBar = findViewById(R.id.password_strength_bar);
         passwordStrengthBar.setProgress(0);
 
-        // NEW: Initialize Google Sign-Up button and Session Manager
         googleSignUpButton = findViewById(R.id.btn_google_sign_in);
         sessionManager = new SessionManager(this);
 
-        // --- Setup for regular signup ---
         setupPasswordStrengthChecker();
         setupGetStartedButton();
         setupSignInButton();
-
-        // --- NEW: Setup for Google Sign-Up ---
         setupGoogleSignUp();
     }
-
-    // --- Methods for Regular Signup ---
 
     private void setupPasswordStrengthChecker() {
         etPassword.addTextChangedListener(new TextWatcher() {
@@ -96,6 +89,18 @@ public class actsignup extends AppCompatActivity {
 
             if (username.isEmpty() || email.isEmpty() || password.isEmpty() || reenter.isEmpty()) {
                 Toast.makeText(this, "Please fill all fields.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Email format validation
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Please enter a valid email address.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Password length validation
+            if (password.length() < 6) {
+                Toast.makeText(this, "Password must be at least 6 characters long.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -135,7 +140,6 @@ public class actsignup extends AppCompatActivity {
                 params.put("username", username);
                 params.put("email", email);
                 params.put("password", password);
-                // Send default values for other fields
                 params.put("dob", "0000-00-00");
                 params.put("mobile", "");
                 params.put("city", "NA");
@@ -152,8 +156,6 @@ public class actsignup extends AppCompatActivity {
         };
         queue.add(request);
     }
-
-    // --- NEW: All methods for Google Sign-Up ---
 
     private void setupGoogleSignUp() {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -175,7 +177,6 @@ public class actsignup extends AppCompatActivity {
                 });
 
         googleSignUpButton.setOnClickListener(view -> {
-            // Sign out first to always show the account picker
             mGoogleSignInClient.signOut().addOnCompleteListener(this, task -> {
                 Intent signInIntent = mGoogleSignInClient.getSignInIntent();
                 googleSignInLauncher.launch(signInIntent);
@@ -203,7 +204,6 @@ public class actsignup extends AppCompatActivity {
                         JSONObject jsonResponse = new JSONObject(response);
 
                         if (jsonResponse.has("role")) {
-                            // Successful login/signup, create session and go to main page
                             int userId = jsonResponse.getInt("user_id");
                             String username = jsonResponse.getString("username");
                             String emailResponse = jsonResponse.getString("email");

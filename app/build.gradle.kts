@@ -22,8 +22,8 @@ android {
         applicationId = "com.SIMATS.smartcity"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -63,7 +63,7 @@ dependencies {
     implementation("com.google.android.libraries.places:places:3.5.0")
 
     implementation("com.android.billingclient:billing:6.1.0")
-    implementation("com.google.guava:guava:33.2.1-android")
+    implementation("com.google.guava:guava:33.2.1-android")  
 
     // Gemini AI & Required Guava Library
     implementation("com.google.ai.client.generativeai:generativeai:0.7.0")

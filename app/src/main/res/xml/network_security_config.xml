@@ -21,8 +21,8 @@
         You can have multiple <domain> entries.
     -->
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="false">14.139.187.229</domain>
-<!--        <domain includeSubdomains="true">99afc524bf5d.ngrok-free.app</domain>-->
+       <domain includeSubdomains="false">14.139.187.229</domain>-->
+<!--        <domain includeSubdomains="true">bc7d1b45773e.ngrok-free.app</domain>&ndash;&gt;-->
         <!-- Example for local development server: -->
         <!-- <domain includeSubdomains="true">10.0.2.2</domain> -->
     </domain-config>

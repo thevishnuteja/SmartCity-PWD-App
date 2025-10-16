@@ -41,6 +41,10 @@
     <color name="text_black">#000000</color>
     <color name="text_grey">#888888</color>
 
+    <color name="colorCompletedGreen">#4CAF50</color>
+    <color name="colorPendingOrange">#FF9800</color>
+    <color name="colorRejectedRed">#F44336</color>
+
 
 
 
